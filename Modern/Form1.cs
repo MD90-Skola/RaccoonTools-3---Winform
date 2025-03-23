@@ -15,6 +15,7 @@ using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
 using Point = System.Drawing.Point;
 using Size = System.Drawing.Size;
+using System.Runtime.InteropServices;
 
 namespace Modern
 {
@@ -96,6 +97,17 @@ namespace Modern
                 leftBoarderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBoarderBtn.Visible = true;
                 leftBoarderBtn.BringToFront();
+                //
+                iconCurrentChildForm0.IconChar = currentBtn.IconChar;
+                iconCurrentChildForm0.IconColor = color;
+
+
+
+
+
+
+
+
             }
 
         }
@@ -151,6 +163,75 @@ namespace Modern
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Reset();
+
+
+
+
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            leftBoarderBtn.Visible = false;
+            iconCurrentChildForm0.IconChar = IconChar.Home;
+            iconCurrentChildForm0.IconColor = Color.MediumPurple;
+            lblTitleChildform1.Text = "Home";
+
+
+
+
+        }
+
+
+
+
+
+        private void iconCurrentChildForm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            // drag form 
+
+
+
+
+            // 
+
+
+            /**
+             * 
+             * 
+             *       DRAG FORM FUNKAR INTE FÅR TA DE NÅGON DAG
+             * 
+             * 
+             */
+
+
+
 
         }
     }

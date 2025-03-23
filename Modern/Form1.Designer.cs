@@ -26,6 +26,10 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+
+
+
+        //  DESIGNER CODE
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -34,10 +38,15 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconCurrentChildForm0 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblTitleChildform1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -142,36 +151,79 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 103);
             this.panelLogo.TabIndex = 0;
             // 
-            // pictureBox1
+            // btnHome
             // 
-            this.pictureBox1.Image = global::Modern.Properties.Resources.tools1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnHome.Image = global::Modern.Properties.Resources.tools1;
+            this.btnHome.Location = new System.Drawing.Point(3, 12);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(169, 63);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.TabIndex = 0;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.lblTitleChildform1);
+            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm0);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(740, 48);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // iconCurrentChildForm0
+            // 
+            this.iconCurrentChildForm0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconCurrentChildForm0.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm0.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.iconCurrentChildForm0.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm0.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm0.IconSize = 36;
+            this.iconCurrentChildForm0.Location = new System.Drawing.Point(15, 7);
+            this.iconCurrentChildForm0.Name = "iconCurrentChildForm0";
+            this.iconCurrentChildForm0.Size = new System.Drawing.Size(36, 36);
+            this.iconCurrentChildForm0.TabIndex = 0;
+            this.iconCurrentChildForm0.TabStop = false;
+            this.iconCurrentChildForm0.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            // 
+            // lblTitleChildform1
+            // 
+            this.lblTitleChildform1.AutoSize = true;
+            this.lblTitleChildform1.Location = new System.Drawing.Point(57, 27);
+            this.lblTitleChildform1.Name = "lblTitleChildform1";
+            this.lblTitleChildform1.Size = new System.Drawing.Size(44, 16);
+            this.lblTitleChildform1.TabIndex = 1;
+            this.lblTitleChildform1.Text = "Home";
+            this.lblTitleChildform1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 557);
+            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "iconCurrentChildForm1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,7 +236,10 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnHome;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm0;
+        private System.Windows.Forms.Label lblTitleChildform1;
     }
 }
 
