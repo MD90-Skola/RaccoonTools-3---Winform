@@ -16,6 +16,7 @@ using Color = System.Drawing.Color;
 using Point = System.Drawing.Point;
 using Size = System.Drawing.Size;
 using System.Runtime.InteropServices;
+using Modern.Forms;
 
 namespace Modern
 {
@@ -25,6 +26,8 @@ namespace Modern
         // Fields
         private IconButton currentBtn;
         private Panel leftBoarderBtn;
+        private Form currentChildForm;
+
 
 
         //constructor
@@ -82,6 +85,9 @@ namespace Modern
         {
             if (senderBtn != null)
             {
+
+
+
                 DisableButton();
 
                 //button
@@ -125,13 +131,40 @@ namespace Modern
                 currentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
             }
-
-
-
         }
-       
-         
-            
+
+
+
+
+        private void OpenChildForm(Form childForm)
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitleChildform1.Text = childForm.Text;
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -143,16 +176,32 @@ namespace Modern
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+
+
+
+
+
         }
 
+
+        // Övrigt Button Menu
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new FormOVRIGT());
         }
 
+
+        // Program Button Menu
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new FormPROGRAM());   
+
+
+
+
+
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
@@ -232,6 +281,11 @@ namespace Modern
 
 
 
+
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
