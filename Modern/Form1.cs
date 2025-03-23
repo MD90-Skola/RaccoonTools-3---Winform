@@ -33,8 +33,12 @@ namespace Modern
         {
             InitializeComponent();
             leftBoarderBtn = new Panel();
-            leftBoarderBtn.Size = new Size(7,60);
+            leftBoarderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBoarderBtn);
+        //    currentBtn = new IconButton();
+          //  currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+
+
         }
 
         //structure
@@ -81,7 +85,7 @@ namespace Modern
 
                 //button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb (37, 36, 81);
+                currentBtn.BackColor = Color.FromArgb (37, 36, 81);   // ändrar knappens färg / inte panelens
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -102,9 +106,9 @@ namespace Modern
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(31, 30, 68);
-               //  currentBtn.ForeColor = Color.Nintend;
+                currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-             //   currentBtn.IconColor = Color.Nintend;
+                currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
@@ -121,15 +125,31 @@ namespace Modern
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender, RGBColors.color1);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender, RGBColors.color2);
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+            
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
